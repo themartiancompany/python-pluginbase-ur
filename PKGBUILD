@@ -96,6 +96,10 @@ _evmfs_archive_src="${_tarname}.zip::${_evmfs_archive_uri}"
 _archive_sig_sum="aa179698830c84608cef0717d1fbd03271c509a6d86f43455c6061b9049555f2"
 _archive_sig_uri="evmfs://${_evmfs_network}/${_evmfs_address}/${_evmfs_ns}/${_archive_sig_sum}"
 _archive_sig_src="${_tarname}.zip.sig::${_archive_sig_uri}"
+source=(
+)
+sha256sums=(
+)
 if [[ "${_evmfs}" == "true" ]]; then
   makedepends+=(
     "evmfs"
@@ -111,10 +115,10 @@ elif [[ "${_evmfs}" == "false" ]]; then
   uri="${_pypi}/f3/07/753451e80d2b0bf3bceec1162e8d23638ac3cb18d1c38ad340c586e90b42/${_tarname}.tar.gz"
   _src="${_tarname}.zip::${_uri}"
 fi
-source=(
+source+=(
   "${_src}"
 )
-sha256sums=(
+sha256sums+=(
   "${_archive_sum}"
 )
 _src="${_tarname}.tar.gz::${_uri}"
