@@ -124,6 +124,11 @@ source=(
 sha256sums=(
   'ff6c33a98fce232e9c73841d787a643de574937069f0d18147028d70d7dee287'
 )
+validpgpkeys=(
+  # Pellegrino Prevete (dvorak)
+  #   <dvorak@0x87003Bd6C074C713783df04f36517451fF34CBEf>
+  '12D8E3D7888F741E89F86EE0FEC8567A644F1D16'
+)
 
 build() {
   cd \
