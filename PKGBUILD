@@ -112,7 +112,7 @@ if [[ "${_evmfs}" == "true" ]]; then
     "${_archive_sig_sum}"
   )
 elif [[ "${_evmfs}" == "false" ]]; then
-  uri="${_pypi}/f3/07/753451e80d2b0bf3bceec1162e8d23638ac3cb18d1c38ad340c586e90b42/${_tarname}.tar.gz"
+  _uri="${_pypi}/f3/07/753451e80d2b0bf3bceec1162e8d23638ac3cb18d1c38ad340c586e90b42/${_tarname}.tar.gz"
   _src="${_tarname}.zip::${_uri}"
 fi
 source+=(
@@ -120,13 +120,6 @@ source+=(
 )
 sha256sums+=(
   "${_archive_sum}"
-)
-_src="${_tarname}.tar.gz::${_uri}"
-source=(
-  "${_src}"
-)
-sha256sums=(
-  'ff6c33a98fce232e9c73841d787a643de574937069f0d18147028d70d7dee287'
 )
 validpgpkeys=(
   # Pellegrino Prevete (dvorak)
